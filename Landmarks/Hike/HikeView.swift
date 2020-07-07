@@ -8,9 +8,19 @@
 
 import SwiftUI
 
+
+
 struct HikeView: View {
     var hike: Hike
     @State private var showDetail = false
+    
+    var transition : AnyTransition {
+        let insertion = AnyTransition.move(edge: .trailing)
+            .combined(with: .opacity)
+        let removal = AnyTransition.scale
+            .combined(with: .opacity)
+        return .asymmetric(insertion: insertion, removal: removal)
+    }
 
     var body: some View {
         VStack {
@@ -27,18 +37,21 @@ struct HikeView: View {
                 Spacer()
 
                 Button(action: {
-                    self.showDetail.toggle()
+                    withAnimation(){
+                        self.showDetail.toggle()
+                    }
                 }) {
                     Image(systemName: "chevron.right.circle")
                         .imageScale(.large)
                         .rotationEffect(.degrees(showDetail ? 90 : 0))
+                        .scaleEffect(showDetail ? 1.5 : 1)
                         .padding()
-                        .animation(.easeInOut)
                 }
             }
 
             if showDetail {
                 HikeDetail(hike: hike)
+                    .transition(transition)
             }
         }
     }
@@ -47,7 +60,8 @@ struct HikeView: View {
 struct HikeView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            HikeView(hike: hikeData[0]).padding()
+            HikeView(hike: hikeData[0])
+                .padding()
             Spacer()
         }
     }

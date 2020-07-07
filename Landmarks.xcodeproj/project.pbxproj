@@ -153,6 +153,16 @@
 			path = Badge;
 			sourceTree = "<group>";
 		};
+		AD35E8C124B518B00078E5C6 /* Hike */ = {
+			isa = PBXGroup;
+			children = (
+				AD35E8B324B502F00078E5C6 /* HikeView.swift */,
+				AD35E8BB24B5048C0078E5C6 /* HikeDetail.swift */,
+				AD35E8BD24B504D10078E5C6 /* HikeGraph.swift */,
+			);
+			path = Hike;
+			sourceTree = "<group>";
+		};
 		ADADA55524B1210E001546B6 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +185,8 @@
 				AD214C0E24B2547E00A0E3CA /* Resources */,
 				AD214C0B24B2538000A0E3CA /* Structs */,
 				AD214C0424B241F700A0E3CA /* Models */,
+				AD35E8B224B502A90078E5C6 /* Badge */,
+				AD35E8C124B518B00078E5C6 /* Hike */,
 				ADADA56124B1210E001546B6 /* AppDelegate.swift */,
 				ADADA56324B1210E001546B6 /* SceneDelegate.swift */,
 				ADADA56524B1210E001546B6 /* LandmarkDetail.swift */,
@@ -184,10 +196,6 @@
 				ADADA56C24B1210F001546B6 /* LaunchScreen.storyboard */,
 				ADADA56F24B1210F001546B6 /* Info.plist */,
 				ADADA56924B1210F001546B6 /* Preview Content */,
-				AD35E8B224B502A90078E5C6 /* Badge */,
-				AD35E8B324B502F00078E5C6 /* HikeView.swift */,
-				AD35E8BB24B5048C0078E5C6 /* HikeDetail.swift */,
-				AD35E8BD24B504D10078E5C6 /* HikeGraph.swift */,
 			);
 			path = Landmarks;
 			sourceTree = "<group>";
